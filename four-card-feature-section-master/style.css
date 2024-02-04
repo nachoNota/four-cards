@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+:root{
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+	--VeryDarkBlue: hsl(234, 12%, 34%);
+	--GrayishBlue: hsl(229, 6%, 66%);
+	--VeryLightGray: hsl(0, 0%, 98%);
+	--ff-poppins: 'Poppins', sans-serif;
+}
+
+img,svg{
+	max-width: 100%;
+	display: block;
+}
+
+body{
+	font-size: 15px;
+	font-family: var(--ff-poppins);
+	min-height: 100vh;
+	background: var(--VeryLightGray);
+	padding-inline: 2rem;
+	padding-block: 2rem;
+	color: var(--GrayishBlue);
+}
+
+header{
+	text-align: center;
+	max-width: 32rem;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+header h1{
+	color: var(--VeryDarkBlue);
+	font-weight: 300;
+}
+
+header h1 span{
+	display: block;
+	font-weight: 600;
+}
+
+.container{
+	margin-inline: auto;
+	max-width: 69rem;
+	margin-top: 3.5rem;
+	display: grid;
+	gap: 25px;
+	align-items: center;
+}
+
+@media (min-width:800px){
+	.container{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+main div section{
+	padding: 1.5rem;
+	background: white;
+	border-radius: 0.3rem;
+	box-shadow: 0 1rem 1.5rem -0.5rem rgb(0, 50, 100, 0.15);
+}
+
+.container section img{
+	margin-left: auto;
+	margin-top: 2rem;
+}
+
+.container section h2{
+	font-size: 1.265rem;
+	color: var(--VeryDarkBlue);
+}
+
+.container section p{
+	margin-top: 0.5rem;
+	font-size: 0.9rem;
+}
+
+.container .mid-col section:first-child{
+	margin-bottom: 1.5625rem;
+	border-top: 0.2rem solid var(--Red);
+}
+
+
+.container .mid-col section:nth-child(2){
+	border-top: 0.2rem solid var(--Orange);
+}
+
+.container div:first-child section{
+	border-top: 0.2rem solid var(--Cyan);
+}
+
+.container div:nth-child(3) section{
+	border-top: 0.2rem solid var(--Blue);
+}
